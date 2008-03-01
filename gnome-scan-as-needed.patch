@@ -1,0 +1,13 @@
+diff -urN gnome-scan-0.5.94/lib/Makefile.am gnome-scan-0.5.94.new/lib/Makefile.am
+--- gnome-scan-0.5.94/lib/Makefile.am	2008-02-28 23:58:01.000000000 +0100
++++ gnome-scan-0.5.94.new/lib/Makefile.am	2008-03-01 18:55:15.000000000 +0100
+@@ -93,6 +93,9 @@
+ 	$(GNOME_SCAN_CFLAGS) \
+ 	-DMODULE_DIR="\"@MODULE_DIR@\""
+ 
++lib@SONAME@_la_LIBADD = \
++	$(GNOME_SCAN_LIBS)
++
+ includegsdir = $(includedir)/gnome-scan-@API_VERSION@
+ includegs_HEADERS = \
+ 	gnome-scan.h	\
