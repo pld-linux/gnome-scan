@@ -1,16 +1,16 @@
 Summary:	GNOME solution for scanning
 Name:		gnome-scan
-Version:	0.6
-Release:	2
+Version:	0.6.1
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-scan/0.6/%{name}-%{version}.tar.bz2
-# Source0-md5:	4bdf2d0ce27893aa802743d24b853afd
+# Source0-md5:	aac087c9c36b92cbd87063e6d7017fe4
 URL:		http://www.gnome.org/projects/gnome-scan/
 BuildRequires:	GConf2-devel >= 2.22.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gegl-devel >= 0.0.16
+BuildRequires:	gegl-devel >= 0.0.21
 BuildRequires:	gettext-devel
 BuildRequires:	gimp-devel >= 2.3
 BuildRequires:	gnome-common >= 2.20.0
@@ -48,7 +48,7 @@ Summary:	Header files for gnomescan library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki gnomescan
 Group:		X11/Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
-Requires:	gegl-devel >= 0.0.16
+Requires:	gegl-devel >= 0.0.21
 Requires:	gimp-devel >= 2.3
 
 %description devel
