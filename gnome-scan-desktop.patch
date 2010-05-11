@@ -1,0 +1,8 @@
+--- gnome-scan-0.6.1/flegita.desktop.in~	2008-12-06 14:33:57.000000000 +0100
++++ gnome-scan-0.6.1/flegita.desktop.in	2010-05-11 16:48:48.079068553 +0200
+@@ -7,4 +7,4 @@
+ Terminal=false
+ Type=Application
+ X-GNOME-DocPath=flegita/flegita.xml
+-Categories=GNOME;Application;Graphics;
++Categories=GNOME;Application;Graphics;Scanning;

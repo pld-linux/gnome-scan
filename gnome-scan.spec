@@ -1,11 +1,12 @@
 Summary:	GNOME solution for scanning
 Name:		gnome-scan
 Version:	0.6.1
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-scan/0.6/%{name}-%{version}.tar.bz2
 # Source0-md5:	aac087c9c36b92cbd87063e6d7017fe4
+Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/projects/gnome-scan/
 BuildRequires:	GConf2-devel >= 2.22.0
 BuildRequires:	autoconf
@@ -96,6 +97,7 @@ Wtyczka flegita dla GIMPa.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__intltoolize}
