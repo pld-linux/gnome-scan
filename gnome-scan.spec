@@ -1,12 +1,13 @@
 Summary:	GNOME solution for scanning
 Name:		gnome-scan
 Version:	0.7.2
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-scan/0.7/%{name}-%{version}.tar.bz2
 # Source0-md5:	44e5341f40a75ebe5cbb8d85becb8f2c
 Patch0:		%{name}-desktop.patch
+Patch1:		babl-0.1.patch
 URL:		http://www.gnome.org/projects/gnome-scan/
 BuildRequires:	GConf2-devel >= 2.22.0
 BuildRequires:	autoconf
@@ -26,6 +27,7 @@ BuildRequires:	sane-backends-devel
 Requires(post,postun):	gtk+2
 Requires(post,postun):	hicolor-icon-theme
 Requires:	%{name}-libs = %{version}-%{release}
+Obsoletes:	gimp-plugin-flegita
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -98,6 +100,7 @@ Wtyczka flegita dla GIMPa.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__intltoolize}
@@ -143,27 +146,27 @@ rm -rf $RPM_BUILD_ROOT
 
 %files libs
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libgnomescan.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgnomescan.so.0
+%attr(755,root,root) %{_libdir}/libgnome-scan.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgnome-scan.so.0
 %dir %{_libdir}/gnome-scan-1.0
 %attr(755,root,root) %{_libdir}/gnome-scan-1.0/libgsane.so
 %attr(755,root,root) %{_libdir}/gnome-scan-1.0/libgsfiles.so
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libgnomescan.so
-%{_libdir}/libgnomescan.la
-%{_includedir}/gnome-scan-1.0
+%attr(755,root,root) %{_libdir}/libgnome-scan.so
+%{_libdir}/libgnome-scan.la
+%{_includedir}/gnome-scan
 %{_pkgconfigdir}/gnome-scan.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libgnomescan.a
+%{_libdir}/libgnome-scan.a
 
 %files apidocs
 %defattr(644,root,root,755)
-%{_gtkdocdir}/gnome-scan-1.0
+%{_gtkdocdir}/gnome-scan
 
-%files -n gimp-plugin-flegita
-%defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/gimp/2.0/plug-ins/flegita-gimp
+#files -n gimp-plugin-flegita
+#defattr(644,root,root,755)
+#attr(755,root,root) %{_libdir}/gimp/2.0/plug-ins/flegita-gimp
