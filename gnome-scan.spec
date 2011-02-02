@@ -12,6 +12,7 @@ URL:		http://www.gnome.org/projects/gnome-scan/
 BuildRequires:	GConf2-devel >= 2.22.0
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gegl-devel >= 0.0.21
 BuildRequires:	gettext-devel
 BuildRequires:	gimp-devel >= 2.3
