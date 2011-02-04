@@ -1,7 +1,7 @@
 Summary:	GNOME solution for scanning
 Name:		gnome-scan
 Version:	0.7.2
-Release:	3
+Release:	4
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-scan/0.7/%{name}-%{version}.tar.bz2
@@ -25,7 +25,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	sane-backends-devel
-Requires(post,postun):	gtk+2
+Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
 Requires:	%{name}-libs = %{version}-%{release}
 Obsoletes:	gimp-plugin-flegita
