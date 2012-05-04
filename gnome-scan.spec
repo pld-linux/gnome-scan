@@ -1,7 +1,7 @@
 Summary:	GNOME solution for scanning
 Name:		gnome-scan
 Version:	0.7.2
-Release:	4
+Release:	5
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-scan/0.7/%{name}-%{version}.tar.bz2
