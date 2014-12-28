@@ -14,7 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gegl-devel >= 0.0.21
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gimp-devel >= 2.3
 BuildRequires:	gnome-common >= 2.20.0
 BuildRequires:	gtk+2-devel >= 2:2.12.8
